@@ -73,6 +73,104 @@ function binomialStdDev(n, p) {
   return Math.sqrt(binomialVariance(n, p))
 }
 
+// Variable to track current chart instance
+let currentChart = null
+
+// Function to create binomial distribution chart
+function createBinomialChart(n, p, k) {
+  const chartContainer = document.getElementById("chartContainer")
+  const canvas = document.getElementById("distributionChart")
+
+  // Show chart container
+  chartContainer.style.display = "block"
+
+  // Destroy previous chart if exists
+  if (currentChart) {
+    currentChart.destroy()
+  }
+
+  // Generate data for all possible values
+  const labels = []
+  const probabilities = []
+  const backgroundColors = []
+
+  for (let i = 0; i <= n; i++) {
+    labels.push(i.toString())
+    const prob = binomialProbability(n, i, p)
+    probabilities.push(prob)
+    // Highlight the selected k value
+    backgroundColors.push(i === k ? "hsl(142 76% 36%)" : "hsl(217 91% 60%)")
+  }
+
+  // Create new chart
+  currentChart = new window.Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: "Probabilidad",
+          data: probabilities,
+          backgroundColor: backgroundColors,
+          borderColor: backgroundColors.map((color) => color.replace("60%", "70%")),
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        title: {
+          display: true,
+          text: `Distribución Binomial (n=${n}, p=${p})`,
+          color: "hsl(0 0% 98%)",
+          font: {
+            size: 16,
+          },
+        },
+        tooltip: {
+          callbacks: {
+            label: (context) => `P(X = ${context.label}) = ${context.parsed.y.toFixed(6)}`,
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Probabilidad",
+            color: "hsl(0 0% 98%)",
+          },
+          ticks: {
+            color: "hsl(0 0% 70%)",
+          },
+          grid: {
+            color: "hsl(0 0% 20%)",
+          },
+        },
+        x: {
+          title: {
+            display: true,
+            text: "Número de éxitos (k)",
+            color: "hsl(0 0% 98%)",
+          },
+          ticks: {
+            color: "hsl(0 0% 70%)",
+          },
+          grid: {
+            color: "hsl(0 0% 20%)",
+          },
+        },
+      },
+    },
+  })
+}
+
 // Función principal de cálculo
 function calculateBinomial() {
   // Obtener valores
@@ -176,6 +274,8 @@ function displayResults(exactProb, lessProb, greaterProb, mean, variance, stdDev
             </div>
         </div>
     `
+
+  createBinomialChart(n, p, k)
 }
 
 // Permitir cálculo con Enter
@@ -186,6 +286,8 @@ document.querySelectorAll("input").forEach((input) => {
     }
   })
 })
+
+
 
   
   
