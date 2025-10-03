@@ -1,2 +1,2 @@
 # Estadistica_software
-App
+Applicacion basada
