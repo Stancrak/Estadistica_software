@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución Binomial</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M16 16L4 10M16 16L28 10M16 16V28" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ProbabilidadPro</span>
+            </div>
+            <a href="../discreta.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Volver
+            </a>
+        </header>
+
+        <main class="main-content">
+            <div class="breadcrumb">
+                <span>Inicio</span>
+                <span class="separator">/</span>
+                <span>Variable Discreta</span>
+                <span class="separator">/</span>
+                <span class="active">Binomial</span>
+            </div>
+
+             Added complete calculator form and results section 
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h1 class="calculator-title">Distribución Binomial</h1>
+                    <p class="calculator-description">Calcula probabilidades en experimentos con dos resultados posibles</p>
+                </div>
+
+                <div class="calculator-content">
+                    <div class="form-section">
+                        <h2 class="section-subtitle">Parámetros</h2>
+                        
+                        <div class="form-group">
+                            <label for="n">Número de ensayos (n)</label>
+                            <input type="number" id="n" min="1" step="1" placeholder="Ej: 10">
+                            <span class="input-hint">Cantidad de veces que se repite el experimento</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="p">Probabilidad de éxito (p)</label>
+                            <input type="number" id="p" min="0" max="1" step="0.01" placeholder="Ej: 0.5">
+                            <span class="input-hint">Valor entre 0 y 1</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="k">Número de éxitos (k)</label>
+                            <input type="number" id="k" min="0" step="1" placeholder="Ej: 5">
+                            <span class="input-hint">Cantidad de éxitos deseados</span>
+                        </div>
+
+                        <button class="btn-primary" onclick="calculateBinomial()">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Calcular
+                        </button>
+                    </div>
+
+                    <div class="results-section">
+                        <h2 class="section-subtitle">Resultados</h2>
+                        <div id="results" class="results-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <p>Ingresa los parámetros y presiona calcular</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Fórmula</h3>
+                    <div class="formula-box">
+                        P(X = k) = C(n, k) × p^k × (1-p)^(n-k)
+                    </div>
+                    <p class="info-text">Donde C(n, k) es el coeficiente binomial "n sobre k"</p>
+                </div>
+            </div>
+             </CHANGE> 
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ProbabilidadPro. Sistema de cálculo estadístico.</p>
+        </footer>
+    </div>
+
+    <script src="../scripts/binomial.js"></script>
+</body>
+</html>
+
+

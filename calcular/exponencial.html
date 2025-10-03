@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribución Exponencial</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M16 16L4 10M16 16L28 10M16 16V28" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ProbabilidadPro</span>
+            </div>
+            <a href="../continua.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Volver
+            </a>
+        </header>
+
+        <main class="main-content">
+            <div class="breadcrumb">
+                <span>Inicio</span>
+                <span class="separator">/</span>
+                <span>Variable Continua</span>
+                <span class="separator">/</span>
+                <span class="active">Exponencial</span>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-header">
+                    <h1 class="calculator-title">Distribución Exponencial</h1>
+                    <p class="calculator-description">Calcula probabilidades de tiempo entre eventos</p>
+                </div>
+
+                <div class="calculator-content">
+                    <div class="form-section">
+                        <h2 class="section-subtitle">Parámetros</h2>
+                        
+                        <div class="form-group">
+                            <label for="lambda">Tasa (λ)</label>
+                            <input type="number" id="lambda" min="0.01" step="0.01" placeholder="Ej: 0.5">
+                            <span class="input-hint">Tasa de ocurrencia de eventos (debe ser > 0)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="x">Tiempo (x)</label>
+                            <input type="number" id="x" min="0" step="0.01" placeholder="Ej: 2">
+                            <span class="input-hint">Tiempo transcurrido (debe ser ≥ 0)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calcType">Tipo de cálculo</label>
+                            <select id="calcType">
+                                <option value="less">P(X ≤ x) - Probabilidad acumulada menor o igual</option>
+                                <option value="greater">P(X > x) - Probabilidad mayor que x</option>
+                                <option value="between">P(a ≤ X ≤ b) - Probabilidad entre dos valores</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="xMaxGroup" style="display: none;">
+                            <label for="xMax">Tiempo máximo (b)</label>
+                            <input type="number" id="xMax" min="0" step="0.01" placeholder="Ej: 5">
+                        </div>
+
+                        <button class="btn-primary" onclick="calculateExponential()">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Calcular
+                        </button>
+                    </div>
+
+                    <div class="results-section">
+                        <h2 class="section-subtitle">Resultados</h2>
+                        <div id="results" class="results-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <p>Ingresa los parámetros y presiona calcular</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-section">
+                    <h3>Fórmula</h3>
+                    <div class="formula-box">
+                        f(x) = λ × e^(-λx)
+                    </div>
+                    <p class="info-text">Modela el tiempo entre eventos en un proceso de Poisson</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ProbabilidadPro. Sistema de cálculo estadístico.</p>
+        </footer>
+    </div>
+
+    <script src="../scripts/exponencial.js"></script>
+</body>
+</html>

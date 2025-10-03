@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Continua</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M16 16L4 10M16 16L28 10M16 16V28" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ProbabilidadPro</span>
+            </div>
+            <a href="index.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Volver
+            </a>
+        </header>
+
+        <main class="main-content">
+            <div class="breadcrumb">
+                <span>Inicio</span>
+                <span class="separator">/</span>
+                <span class="active">Variable Continua</span>
+            </div>
+
+            <div class="hero">
+                <h1 class="hero-title">Variable <span class="highlight">Continua</span></h1>
+                <p class="hero-subtitle">Selecciona la distribución que deseas calcular</p>
+            </div>
+
+            <section class="cards-section">
+                <div class="cards-grid">
+
+                    <a href="calcular/normal.html" class="card distribution-card">
+                        <div class="card-header">
+                            <div class="card-icon-small">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 18C3 18 5 12 8 12C11 12 11 18 14 18C17 18 19 12 21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                                    <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge continuous">Continua</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Distribución Normal</h3>
+                            <p class="card-description">Calcula probabilidades en la distribución gaussiana o campana de Gauss</p>
+                            <div class="card-formula">f(x) = (1/σ√(2π)) × e^(-(x-μ)²/(2σ²))</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">Calcular →</span>
+                        </div>
+                    </a>
+
+                    <a href="calcular/exponencial.html" class="card distribution-card">
+                        <div class="card-header">
+                            <div class="card-icon-small">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 20C3 20 5 18 8 16C11 14 13 10 16 8C19 6 21 4 21 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge continuous">Continua</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Distribución Exponencial</h3>
+                            <p class="card-description">Calcula probabilidades de tiempo entre eventos en un proceso de Poisson</p>
+                            <div class="card-formula">f(x) = λ × e^(-λx)</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">Calcular →</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ProbabilidadPro. Sistema de cálculo estadístico.</p>
+        </footer>
+    </div>
+</body>
+</html>

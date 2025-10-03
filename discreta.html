@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Discreta</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M16 16L4 10M16 16L28 10M16 16V28" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ProbabilidadPro</span>
+            </div>
+            <a href="index.html" class="back-button">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Volver
+            </a>
+        </header>
+
+        <main class="main-content">
+            <div class="breadcrumb">
+                <span>Inicio</span>
+                <span class="separator">/</span>
+                <span class="active">Variable Discreta</span>
+            </div>
+
+            <div class="hero">
+                <h1 class="hero-title">Variable <span class="highlight">Discreta</span></h1>
+                <p class="hero-subtitle">Selecciona la distribución que deseas calcular</p>
+            </div>
+
+            <section class="cards-section">
+                <div class="cards-grid">
+                    <a href="calcular/binomial.html" class="card distribution-card">
+                        <div class="card-header">
+                            <div class="card-icon-small">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                                    <circle cx="6" cy="6" r="2" fill="currentColor"/>
+                                    <circle cx="18" cy="6" r="2" fill="currentColor"/>
+                                    <circle cx="6" cy="18" r="2" fill="currentColor"/>
+                                    <circle cx="18" cy="18" r="2" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge">Discreta</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Distribución Binomial</h3>
+                            <p class="card-description">Calcula probabilidades de éxitos en n ensayos independientes con probabilidad constante</p>
+                            <div class="card-formula">P(X = k) = C(n,k) × p^k × (1-p)^(n-k)</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">Calcular →</span>
+                        </div>
+                    </a>
+
+                    <a href="calcular/hipergeometrica.html" class="card distribution-card">
+                        <div class="card-header">
+                            <div class="card-icon-small">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <rect x="3" y="3" width="8" height="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <rect x="13" y="3" width="8" height="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <rect x="3" y="13" width="8" height="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <rect x="13" y="13" width="8" height="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge">Discreta</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Distribución Hipergeométrica</h3>
+                            <p class="card-description">Calcula probabilidades en muestreo sin reemplazo de una población finita</p>
+                            <div class="card-formula">P(X = k) = [C(K,k) × C(N-K,n-k)] / C(N,n)</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">Calcular →</span>
+                        </div>
+                    </a>
+
+                    <a href="calcular/poisson.html" class="card distribution-card">
+                        <div class="card-header">
+                            <div class="card-icon-small">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="card-badge">Discreta</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Distribución de Poisson</h3>
+                            <p class="card-description">Calcula probabilidades de eventos raros en un intervalo de tiempo o espacio</p>
+                            <div class="card-formula">P(X = k) = (λ^k × e^(-λ)) / k!</div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="card-link">Calcular →</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 ProbabilidadPro. Sistema de cálculo estadístico.</p>
+        </footer>
+    </div>
+</body>
+</html>
