@@ -1,2 +1,5 @@
-# Estadistica_software
-Applicacion 
+# Estadistica software
+Applicacion de calculos estadisticos
+Integrantes:
+Kevin
+Rodrigo
