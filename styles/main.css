@@ -66,6 +66,17 @@ body {
   letter-spacing: -0.02em;
 }
 
+.header-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .back-button {
   display: flex;
   align-items: center;
@@ -341,6 +352,18 @@ body {
 .feature-item p {
   color: hsl(var(--muted-foreground));
   font-size: 0.875rem;
+}
+
+/* Banner Section */
+.banner {
+  margin: 4rem 0;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
 }
 
 /* Calculator Container */
